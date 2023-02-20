@@ -66,6 +66,8 @@ class RockPaperScissors {
             console.log("It's a tie.");
             this.tie += 1;
         }
+        console.log("\n");
+        this.rounds += 1;
     }
     winnerOfgame() {
         const result = [[`Player wins: ${this.playerWon}`], [`Com[puter] wins: ${this.computerWon}`]];
@@ -89,7 +91,5 @@ while (game.rounds < 5) {
     game.makeMove();
     game.computerMove();
     game.winnerOfRound(game.player, game.computer);
-    console.log("\n");
-    game.rounds += 1;
     game.winnerOfgame();
 }
